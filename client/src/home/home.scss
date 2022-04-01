@@ -1,0 +1,143 @@
+.container {
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+  }
+  
+.container .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(100, 148, 237, 0.178);
+  color: white;
+  cursor: pointer;
+}
+.container{
+    .header{
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 0.1rem solid slategray;
+        h3{
+            font-size: 2rem;
+        }
+    }
+    .content{
+        .create__content-items{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 1rem;
+
+            .create__content-item{
+                display: flex;
+                flex-direction: column;
+
+                label{
+                    color: #a9a7a7;
+                    padding-bottom: 0.3rem;
+                }
+            }
+            button{
+                border: none;
+                border-radius: 0.2rem;
+                height: 2rem;
+                margin-top: 1.2rem;
+                background: blue;
+                color: white;
+                font-size: 1rem;
+            }
+        }
+        .list__content-item{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: lightblue;
+        }
+        
+        .list__content-table{
+            overflow-x: auto;
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                border:1px solid #a9a7a7;
+                thead{
+                    background-color: aliceblue;
+                }
+                tbody tr {
+                    text-align: center;
+                    border-bottom: 1px solid gray;
+                    td{
+                        height: 2.8rem;
+                        
+                        color: gray;
+                    }
+                    .table__button{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 2rem;
+                        float: right;
+                       button{
+                           background-color: #bbbbbe;
+                           border: none;
+                           font-size: 1rem;
+                           border-radius: 5px;
+                           padding: 0.2rem 0.5rem;
+                           color: rgb(51, 51, 51);
+                       }
+                    }
+                }
+                .urgent{
+                    background-color: #e91e63;
+                    width: 100%;
+                    border: none;
+                    color: white;
+                    padding: 0.2rem 0.5rem;
+                }
+                .regular{
+                    background-color: #9aa50aeb;
+                    width: 100%;
+                    border: none;
+                    color: white;
+                    padding: 0.2rem 0.5rem;
+                }
+                .trival{
+                    background-color: #292df0;
+                    width: 100%;
+                    border: none;
+                    color: white;
+                    padding: 0.2rem 0.5rem;
+                }
+            }
+        }
+        input{
+            height: 1.5rem;
+            border-color: lightgray;
+            border: 1px solid lightgray;
+            &:focus{
+                outline: none;
+            }
+        }
+        select{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+            height: 1.75rem;
+            border-color: lightgray;
+            border: 1px solid lightgray;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .container .content .create__content-items{
+        grid-template-columns: 1fr;
+    }
+  }
